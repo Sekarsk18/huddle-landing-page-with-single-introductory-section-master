@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+}
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--Violet);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+}
+
+.background-design {
+    position: fixed;
+    z-index: -1;
+}
+
+.Title img {
+    width: 180px;
+    margin-bottom: 2.5rem;
+    transition: all .2s linear;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    transition: all .2s linear;
+}
+
+.image img {
+    max-width: 580px;
+    transition: all .2s linear;
+}
+
+.Content {
+    align-self: center;
+    display: flex;
+    gap: 2rem;
+    transition: all .2s linear;
+}
+
+.Desc {
+    max-width: 450px;
+    padding: 2rem .2rem 0 1rem;
+    transition: all .2s linear;
+}
+
+.Desc h1 {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
+    transition: all .2s linear;
+}
+
+.Desc p {
+    font-size: .95rem;
+    line-height: 1.5rem;
+    color: hsla(0, 0%, 100%, 0.9);
+    margin-bottom: 1.2rem;
+    transition: all .2s linear;
+}
+
+.Desc button {
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    font-family: "Poppins", serif;
+    color: var(--Violet);
+    font-size: .9rem;
+    box-shadow: 3px 3px 8px rgba(20, 20, 20, 0.8);
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.Desc button:hover {
+    background-color: var(--SoftMagenta);
+    color: white;
+}
+
+.social {
+    align-self: end;
+    display: flex;
+    gap: 1rem;
+}
+
+
+.social div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.social div:hover {
+    color: var(--SoftMagenta);
+    border-color: var(--SoftMagenta);
+}
+
+
+@media screen and (max-width: 1100px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        margin-bottom: 2rem;
+    }
+
+    .Content {
+        flex-direction: column;
+    }
+
+    .Desc {
+        max-width: 580px;
+    }
+
+    .social {
+        float: left;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .image img {
+        max-width: 380px;
+    }
+
+    .Desc {
+        padding: 0;
+        max-width: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .Desc h1 {
+        text-align: center;
+    }
+
+    .Desc p {
+        text-align: center;
+    }
+
+    .Desc button {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .background-design{
+        content:  url(images/bg-mobile.svg);
+        position: fixed;
+        z-index: -1;
+    }
+
+    .container {
+        margin-block: 40px;
+    }
+
+    .image img {
+        max-width: 300px;
+    }
+
+    .Desc {
+        max-width: 300px;
+        padding: .5rem
+    }
+
+    .Desc h1 {
+        font-size: 1.5rem;
+    }
+}
